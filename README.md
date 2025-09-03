@@ -1,3 +1,6 @@
+[Mypage is here!](https://astromypage.netlify.app/)
+
+
 # Astro Starter Kit: Minimal
 
 ```sh
