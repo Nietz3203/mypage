@@ -1,0 +1,47 @@
+---
+const pageTitle = "私について";
+
+const identity = {
+	firstName: "ユウキ",
+	country: "日本",
+	occupation: "大学生",
+	hobbies: ["ゲーム", "映画鑑賞", "工作とか"],
+};
+
+const skills = ["HTML", "CSS", "C++", "Unity", "Astro", "ドキュメントの執筆"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
+---
+<!-- https://github.com/Nietz3203/mypage.git -->
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<a href="/">index</a>
+		<a href="/about/">about</a>
+		<a href="/blog/">blog</a>
+
+		<p>以下、私について。</p>
+		<ul>
+			<li>私の名前は{identity.firstName}です。</li>
+			<li>{identity.country}に住んでおり、{identity.occupation}として生活しています。</li>
+			{identity.hobbies.length >= 2 &&
+				<li>私の趣味のうち2つは{identity.hobbies[0]}と{identity.hobbies[1]}です。</li>
+			}
+		</ul>
+		<p>私のスキルは以下の通り。</p>
+		<ul>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
+
+		{happy }
+	</body>
+</html>
